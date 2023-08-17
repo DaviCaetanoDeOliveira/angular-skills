@@ -1,3 +1,24 @@
 .example-card {
-    max-width: 400px;
-  }
+   width: 350px;
+   height: 450px;
+   border-width: 10;
+   border-radius: 10px;
+   border: 2px solid silver;
+   background-color: "#FFF";
+   padding: 10;
+   margin: 10px;
+   display: inline-block;
+   justify-content: center;
+   align-items: center;
+   text-align: justify;
+   vertical-align: middle;
+   box-shadow: rgba(0, 0, 0, 0.4) -5px 5px, rgba(0, 0, 0, 0.3) -10px 10px, rgba(0, 46, 170, 0.2) -15px 15px, rgba(0, 0, 0, 0.1) -10px 10px, rgba(0, 0, 0, 0.05) -0 0;
+}
+
+.likesFive {
+   color: "#4169E1"
+}
+
+.likesUpTen {
+   color: "#D4AF37"
+}
