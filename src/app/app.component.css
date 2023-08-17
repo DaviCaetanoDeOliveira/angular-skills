@@ -1,4 +1,16 @@
-p {
-  font-family: Lato;
+header {
+	background-color: black;
+   background-image: linear-gradient(to right, #0a080f, #14224e);
+   color: transparent;
+   width: 100%;
+   display: flex;
+   font-size: 40;
+   border-bottom: 2px solid white;
 }
 
+header h3 { 
+   font-weight: lighter;
+   margin: 30px;
+   color: #FFF;
+   font-size: 200%;
+}
