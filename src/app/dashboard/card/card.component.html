@@ -1,15 +1,16 @@
 <mat-card class="example-card">
-  <mat-card-header>
-    <mat-card-title>{{card.name}}</mat-card-title>
-  </mat-card-header>
-  <img mat-card-image [src]="card.pic" alt="Photo of a Shiba Inu">
-  <mat-card-content>
-    <p>
-      {{card.description}}
-    </p>
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-button>LIKE {{card.likes}}</button>
-    <button mat-button>SHARE</button>
-  </mat-card-actions>
+	<mat-card-header>
+		<mat-card-title><strong>{{ card.name }}</strong></mat-card-title>
+	</mat-card-header>
+	<img style="height: 150px; width: 150px; margin-left: 100px;" mat-card-image [src]="card.pic" alt="?">
+	<mat-card-content>
+		<p style="margin-bottom: 5px; font-size: 18px;"><strong>Nível: {{ card.level }}</strong></p>
+		<p style="font-size: 15px;">{{ card.description }}</p>
+	</mat-card-content>
+	<mat-card-actions>
+		<button *ngIf="(card.likes < 5)" mat-button matTooltip="Curtir" (click)="onLike(card.id)"><mat-icon>thumb_up_alt</mat-icon> {{ card.likes }}</button>
+		<button *ngIf="(card.likes >= 5 && card.likes <= 10)" style="color: navy;" mat-button matTooltip="Curtir" (click)="onLike(card.id)"><mat-icon>thumb_up_alt</mat-icon> {{ card.likes }}</button>
+		<button *ngIf="(card.likes > 10)" style="color: goldenrod;" mat-button matTooltip="Curtir" (click)="onLike(card.id)"><mat-icon>thumb_up_alt</mat-icon> {{ card.likes }}</button>
+		<button mat-button matTooltip="Perfil do LinkedIn"  (click)="onShare()"><img style="height: 25px; width: 25px; margin-left: -10px;" src="https://cdn-icons-png.flaticon.com/512/3536/3536569.png"/></button>
+	</mat-card-actions>
 </mat-card>
